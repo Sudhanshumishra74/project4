@@ -1,0 +1,400 @@
+/* Custom properties */
+:root {
+  --c-grey-900: hsl(217, 19%, 35%);
+  --c-grey-500: hsl(214, 17%, 51%);
+  --c-grey-400: hsl(212, 23%, 69%);
+  --c-grey-200: hsl(210, 46%, 95%);
+  --c-white: hsl(0, 100%, 100%);
+  --spacing-200: 1rem;
+  --spacing-300: 1.5rem;
+  --spacing-400: 2rem;
+  --spacing-500: 2.5rem;
+  --spacing-600: 3rem;
+  --spacing-700: 3.5rem;
+  --spacing-800: 4rem;
+  --spacing-1300: 6.5rem;
+  --spacing-2000: 10rem;
+  --fw-regular: 500;
+  --fw-bold: 700;
+}
+
+/* Google Icons */
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 18;
+  color: var(--c-grey-500);
+}
+
+/* Global styles */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Text classes */
+
+.text-preset-1-bold {
+  font-size: 1.25rem;
+  font-weight: var(--fw-bold);
+  line-height: 1.3;
+  letter-spacing: 0.015625rem;
+}
+
+.text-preset-2-bold {
+  font-size: 0.8125rem;
+  font-weight: var(--fw-bold);
+  line-height:1.4;
+  letter-spacing: 0.0075rem;
+}
+
+.text-preset-2-medium {
+  font-size: 0.8125rem;
+  font-weight: var(--fw-regular);
+  line-height: 1.4;
+  letter-spacing: 0.0075rem;
+}
+
+.text-preset-3 {
+  font-size: 0.8125rem;
+  font-weight: var(--fw-regular);
+  line-height: 1.4;
+  letter-spacing: 0.25rem;
+}
+
+/* Main styles */
+
+body {
+  font-family: "Manrope", sans-serif;
+  background-color: var(--c-grey-200);
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-inline: 1.5rem;
+}
+
+/* Card styles */
+
+.card-container {
+  max-width: 38rem;
+  background-color: var(--c-white);
+  margin-block: auto;
+  border-radius: 10px;
+  box-shadow: 0 40px 40px hsl(210, 29%, 84%, 0.5);
+  position: relative;
+  overflow: clip;
+}
+
+/* Card Image */
+.card-img-container {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  height: 12.5rem;
+  overflow: clip;
+}
+
+.card-img-container img {
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+/* Card Text */
+.card-main-content {
+  position: relative;
+}
+
+.card-text-container {
+  padding-inline: var(--spacing-400);
+  padding-block-start: var(--spacing-400);
+  margin-block-end: var(--spacing-600);
+}
+
+.card-text-header {
+  color: var(--c-grey-900);
+  margin-block-end: var(--spacing-300);
+}
+
+.card-text-paragraph {
+  color: var(--c-grey-500);
+}
+
+/* Card footer */
+.card-footer-container {
+  display: flex;
+  align-items: center;
+}
+
+.card-profile-container {
+  width: 100%;
+  padding-block-end: var(--spacing-200);
+  padding-inline: var(--spacing-400);
+  display: flex;
+  align-items: center;
+}
+
+.card-profile-container img {
+  border-radius: 50%;
+  width: 2.5rem;
+}
+
+.card-profile {
+  margin-inline-start: var(--spacing-200);
+}
+
+.profile-name {
+  color: var(--c-grey-900);
+}
+
+.profile-date {
+  color: var(--c-grey-400);
+}
+
+.btn {
+  background-color: var(--c-grey-200);
+  margin-inline-start: auto;
+  border-radius: 50%;
+  border: 0;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.btn img {
+  width: 0.9375rem;
+  height: 0.9375rem;
+}
+
+/* Dark button for when socials container is open */
+.dark-btn {
+  background-color: var(--c-grey-500);
+}
+
+.dark-btn .material-symbols-outlined {
+  color: var(--c-white);
+}
+
+/* Card Socials Container */
+
+.card-socials-container {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  background-color: var(--c-grey-900);
+  width: 100%;
+  height: 4.75rem;
+  /* bottom: -3.5rem; */
+  bottom: -5rem;
+  left: 0;
+  padding-block: var(--spacing-200);
+  padding-inline: var(--spacing-400);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.card-socials {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 2rem;
+}
+
+.card-socials p {
+  color: var(--c-grey-400);
+  text-transform: uppercase;
+  margin-inline-end: var(--spacing-300);
+}
+
+.card-socials a {
+  margin-inline-end: var(--spacing-200);
+}
+
+.card-socials .social-item {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.card-socials .btn img {
+  width: 0.9375rem;
+  height: 0.9375rem;
+}
+
+/* Animations & classes for Social container */
+
+.show-socials {
+  animation-name: show-socials;
+  animation-duration: 500ms;
+  animation-fill-mode: forwards;
+}
+
+.close-socials {
+  animation-name: close-socials;
+  animation-duration: 500ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes show-socials {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 1;
+    bottom: 0;
+  }
+}
+
+@keyframes close-socials {
+  from {
+    opacity: 1;
+    bottom: 0;
+  }
+  to {
+    opacity: 0.2;
+    bottom: -5rem;
+  }
+}
+
+/* Media Queries */
+
+/* Media query > 768px */
+@media (min-width: 48rem) {
+  .card-container {
+    min-width: 38rem;
+    height: 21.625rem;
+    display: flex;
+    overflow: visible;
+  }
+
+  .card-img-container {
+    display: flex;
+    width: 100%;
+    height: auto;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 10px;
+  }
+
+  .card-main-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-block: var(--spacing-500);
+  }
+
+  .card-text-container {
+    margin-block-end: var(--spacing-300);
+    padding-block-start: 0;
+  }
+
+  /* Card Socials Container */
+
+  .card-socials-container {
+  width: 15.5rem;
+  height: 3.75rem;
+  bottom: 7.8125rem;
+  left: 13.625rem;
+  padding-inline-end:  var(--spacing-200);
+  border-radius: 10px;
+  }
+
+  .card-socials-container::before {
+    content: "";
+    width: 0.9375rem;
+    height: 0.9375rem;
+    background-color: var(--c-grey-900);
+    position: absolute;
+    bottom: -7.5px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+
+  }
+
+  .card-socials {
+    justify-content: center;
+  }
+
+  .card-socials .btn {
+    display: none;
+  }
+
+  /* Animation for Socials container */
+  @keyframes show-socials {
+    from {
+      opacity: 0;
+      /* transform: scale(0); */
+      transform: translateY(50px) scale(0);
+    }
+    to {
+      opacity: 1;
+      /* transform: scale(1); */
+      transform: translateY(0px) scale(1);
+    }
+  }
+
+  @keyframes close-socials {
+    from {
+      opacity: 1;
+      /* transform: scale(1); */
+      transform: translateY(0px) scale(1);
+    }
+    to {
+      opacity: 0;
+      /* transform: scale(0); */
+      transform: translateY(50px) scale(0);
+    }
+  }
+}
+
+/* Media query > 1200px */
+@media (min-width: 75rem) {
+  .card-container {
+    min-width: 45.625rem;
+    height: 17.5rem;
+  }
+
+  .card-img-container img {
+    width: 100%;
+    object-position: 0% 25%;
+  }
+
+  .card-main-content {
+    justify-content: center;
+    padding-block: var(--spacing-300);
+  }
+
+  .card-profile-container {
+    padding-block-end: 0;
+  }
+
+  .card-socials-container {
+    bottom: 5.625rem;
+    left: 16.5rem;
+  }
+}
+
+/* Hidden class for overall use */
+
+.hidden {
+  display: none;
+}
